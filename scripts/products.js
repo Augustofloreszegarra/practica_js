@@ -1,5 +1,5 @@
 class Product {
-  constructor ( id, title, price, stock, images, onsale, supplier, colors, description, discount ) {
+  constructor ( id, title, price, stock, images, onsale, supplier, colors, descriptionCort, descriptionLarge, discount, igv ) {
     this.id = id;
     this.title = title;
     this.price = price;
@@ -8,8 +8,10 @@ class Product {
     this.onsale = onsale;
     this._supplier = supplier;
     this.colors = colors;
-    this.description = description;
+    this.descriptionCort = descriptionCort;
+    this.descriptionLarge = descriptionLarge;
     this.discount = discount;
+    this.igv = igv;
   }
 }
 
@@ -18,12 +20,22 @@ const prod1 = new Product(
   "Producto 1",
   100,
   20,
-  [ "mock1.jpg", "mock2.jpg" ],
+  [ "mock1.jpg", "mock2.jpg", "mock1.jpg", "mock2.jpg", "mock1.jpg", "mock2.jpg" ],
   false,
   "Proveedor 1",
-  [ "red", "green", "blue" ],
+  [ "red", "green", "blue", "white" ],
   "Space Gray",
-  10
+  `Experience the power of creativity with the MacBook Pro 13'4.
+  Featuring 8GB of RAM and 512GB of storage, this laptop provides
+  the performance and storage capacity needed for demanding tasks.
+  The sleek design in silver and space gray adds a touch of
+  sophistication. The high-resolution Retina display brings your
+  visuals to life, whether you're editing photos, creating videos,
+  or simply browsing the web. With the latest technology and a
+  lightweight build, the MacBook Pro 13'4 is the perfect companion
+  for professionals and creative individuals alike.`,
+  20,
+  0.18
 );
 
 const prod2 = new Product(
@@ -36,7 +48,17 @@ const prod2 = new Product(
   "Proveedor 2",
   [ "black", "white" ],
   "Space Gray",
-  20
+  `Experience the power of creativity with the MacBook Pro 13'4.
+  Featuring 8GB of RAM and 512GB of storage, this laptop provides
+  the performance and storage capacity needed for demanding tasks.
+  The sleek design in silver and space gray adds a touch of
+  sophistication. The high-resolution Retina display brings your
+  visuals to life, whether you're editing photos, creating videos,
+  or simply browsing the web. With the latest technology and a
+  lightweight build, the MacBook Pro 13'4 is the perfect companion
+  for professionals and creative individuals alike.`,
+  20,
+  0.18
 );
 
 const prod3 = new Product(
@@ -49,7 +71,17 @@ const prod3 = new Product(
   "Proveedor 3",
   [ "yellow", "blue" ],
   "Space Gray",
-  30
+  `Experience the power of creativity with the MacBook Pro 13'4.
+  Featuring 8GB of RAM and 512GB of storage, this laptop provides
+  the performance and storage capacity needed for demanding tasks.
+  The sleek design in silver and space gray adds a touch of
+  sophistication. The high-resolution Retina display brings your
+  visuals to life, whether you're editing photos, creating videos,
+  or simply browsing the web. With the latest technology and a
+  lightweight build, the MacBook Pro 13'4 is the perfect companion
+  for professionals and creative individuals alike.`,
+  20,
+  0.18
 );
 
 const prod4 = new Product(
@@ -62,7 +94,17 @@ const prod4 = new Product(
   "Proveedor 4",
   [ "black", "white" ],
   "Space Gray",
-  40
+  `Experience the power of creativity with the MacBook Pro 13'4.
+  Featuring 8GB of RAM and 512GB of storage, this laptop provides
+  the performance and storage capacity needed for demanding tasks.
+  The sleek design in silver and space gray adds a touch of
+  sophistication. The high-resolution Retina display brings your
+  visuals to life, whether you're editing photos, creating videos,
+  or simply browsing the web. With the latest technology and a
+  lightweight build, the MacBook Pro 13'4 is the perfect companion
+  for professionals and creative individuals alike.`,
+  20,
+  0.18
 );
 
 const prod5 = new Product(
@@ -75,8 +117,19 @@ const prod5 = new Product(
   "Proveedor 5",
   [ "red", "green" ],
   "Space Gray",
-  50
+  `Experience the power of creativity with the MacBook Pro 13'4.
+  Featuring 8GB of RAM and 512GB of storage, this laptop provides
+  the performance and storage capacity needed for demanding tasks.
+  The sleek design in silver and space gray adds a touch of
+  sophistication. The high-resolution Retina display brings your
+  visuals to life, whether you're editing photos, creating videos,
+  or simply browsing the web. With the latest technology and a
+  lightweight build, the MacBook Pro 13'4 is the perfect companion
+  for professionals and creative individuals alike.`,
+  20,
+  0.18
 );
+
 const prod6 = new Product(
   6,
   "Producto 6",
@@ -87,7 +140,17 @@ const prod6 = new Product(
   "Proveedor 6",
   [ "red", "green" ],
   "Space Gray",
-  50
+  `Experience the power of creativity with the MacBook Pro 13'4.
+  Featuring 8GB of RAM and 512GB of storage, this laptop provides
+  the performance and storage capacity needed for demanding tasks.
+  The sleek design in silver and space gray adds a touch of
+  sophistication. The high-resolution Retina display brings your
+  visuals to life, whether you're editing photos, creating videos,
+  or simply browsing the web. With the latest technology and a
+  lightweight build, the MacBook Pro 13'4 is the perfect companion
+  for professionals and creative individuals alike.`,
+  20,
+  0.18
 );
 
 const products = [ prod1, prod2, prod3, prod4, prod5, prod6 ];

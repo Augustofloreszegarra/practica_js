@@ -6,7 +6,7 @@ function createdCard ( product ) {
     <img class="product-img" src="/assets/${ product.images[ 0 ] }" alt="iPad Pro 12.9" />
     <div class="product-info">
     <span class="product-title">${ product.title }</span>
-    <span class="product-description">${ product.description }</span>
+    <span class="product-description">${ product.descriptionCort }</span>
     <div class="product-price-block">
         <span class="product-price">${ product.price }</span>
         <span class="product-discount">${ product.discount }% Off</span>
