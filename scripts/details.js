@@ -112,9 +112,7 @@ printDetails( product )
 
 function changeSubtotal () {
   const quantityValue = document.getElementById( "quantity" ).value;
-  if ( quantityValue < 1 ) {
-    document.getElementById( "quantity" ).value = 1;
-  }
+
   const price = product.price; // Obtener el precio como un número
   const total = price * parseInt( quantityValue ); // Calcular el total
   document.getElementById( "price" ).innerText = total.toFixed( 2 );
