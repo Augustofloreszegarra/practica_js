@@ -92,7 +92,7 @@ function printDetails ( product ) {
             <div class="checkout-process">
             <div class="top">
                 <input id="quantity" type="number" min="1" value="1" onchange="changeSubtotal()"/>
-                <button type="button" class="cart-btn">
+                <button type="button" class="cart-btn" onclick="saveProduct(event)">
                 Añadir al Carrito
                 </button>
             </div>
@@ -118,4 +118,32 @@ function changeSubtotal () {
   document.getElementById( "price" ).innerText = total.toFixed( 2 );
 }
 
+function saveProduct(event) {
+  // Obtener el ID del botón que desencadenó el evento
+  const buttonId = event.target.id;
+  // Extraer el ID del producto del ID del botón asumiendo un formato específico
+  const productId = buttonId.substring(7); // Suponiendo que el ID del botón sigue el formato "addButton-{productId}"
+
+  // Buscar el producto en el arreglo de productos utilizando el método .find
+  const product = products.find(product => product.id === productId);
+
+  // Si se encuentra el producto
+  if (product) {
+      // Crear un objeto con las propiedades de la compra
+      const purchase = {
+          productId: product.id,
+          productName: product.name,
+          price: product.price,
+          quantity: 1 // Suponiendo que la cantidad por defecto es 1 al añadir al carrito
+      };
+
+      // Convertir el objeto a formato JSON
+      const purchaseJSON = JSON.stringify(purchase);
+
+      // Guardar el objeto JSON en la memoria del navegador utilizando localStorage
+      localStorage.setItem('cartProduct', purchaseJSON);
+  } else {
+      console.error('Producto no encontrado');
+  }
+}
 changeSubtotal()
