@@ -17,6 +17,7 @@
 .product-cart {
   width: 680px;
   align-items: center;
+  gap: 20px;
 }
 .product-img {
   width: 100px;
@@ -31,10 +32,6 @@
   width: 340px;
   height: 100px;
 }
-.product-price {
-  width: 100%;
-  text-align: right;
-}
 .product-description {
   white-space: nowrap;
   overflow: hidden;
@@ -46,6 +43,10 @@
   border-radius: 10px;
   border: 1px #eaeaea solid;
   padding: 5px;
+}
+.product-price {
+  width: 30%;
+  text-align: right;
 }
 
 /* RESUME */
