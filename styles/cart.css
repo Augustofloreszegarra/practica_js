@@ -1,9 +1,10 @@
 .cart-section {
   display: flex;
+  flex-direction: column;
 }
 
 .product-cart, .cart-resume {
-  background-color: #f2f2f2;
+  background-color: #dbdada;
   border-radius: 5px;
   padding: 30px;
   margin: 10px;
@@ -53,6 +54,7 @@
 .cart-resume {
   width: 340px;
   flex-direction: column;
+  margin-left: auto;
 }
 .cart-data {
   flex-grow: 1;

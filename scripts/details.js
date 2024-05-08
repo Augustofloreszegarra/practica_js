@@ -134,6 +134,9 @@ function saveProduct(id) {
     price: found.price,
     image: found.images[0],
     color: document.querySelector("#color").value,
+    descriptionCort: found.descriptionCort,
+    descriptionLarge: found.descriptionLarge,
+    igv: found.igv,
     quantity: parseInt(document.querySelector("#quantity").value),
   };
 
