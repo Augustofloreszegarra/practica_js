@@ -1,3 +1,4 @@
+// Definimos las opciones de la barra de navegación y el pie de página
 const options = [
   {
     title: "Ofertas",
@@ -22,18 +23,26 @@ const options = [
   { title: "Garantía", href: "./index.html", refs: [] },
 ];
 
+// hideSearch: esta función oculta el campo de búsqueda si la página no es la principal
 function hideSearch() {
   const pathname = location.pathname;
+  // Verificamos si la página no es la principal
   if (!pathname.includes("index")) {
+    // Removemos el campo de búsqueda del encabezado
     document
       .querySelector(".header-form")
       .removeChild(document.querySelector(".header-input"));
   }
 }
 
+// printNavBar: esta función imprime la barra de navegación en la página
 function printNavBar(opts, id) {
+  // Inicializamos una variable template para construir la plantilla HTML
   let template = "";
+
+  // Iteramos sobre cada objeto en el array opts
   for (const each of opts) {
+    // Construimos la plantilla HTML para cada opción
     template =
       template +
       `
@@ -42,13 +51,22 @@ function printNavBar(opts, id) {
       </li>
     `;
   }
+
+  // Obtener el elemento del DOM con el ID especificado en id
   const selector = document.getElementById(id);
+
+  // Establecer el contenido HTML del elemento con la plantilla construida
   selector.innerHTML = template;
 }
 
+// printFooter: esta función imprime el pie de página en la página
 function printFooter(opts, id) {
+  // Inicializamos una variable template para construir la plantilla HTML
   let template = "";
+
+  // Iteramos sobre cada objeto en el array opts
   for (const each of opts) {
+    // Construimos la plantilla HTML para cada opción
     template =
       template +
       `
@@ -65,7 +83,11 @@ function printFooter(opts, id) {
       </ul>
     `;
   }
+
+  // Obtener el elemento del DOM con el ID especificado en id
   const selector = document.getElementById(id);
+
+  // Establecer el contenido HTML del elemento con la plantilla construida
   selector.innerHTML = template;
 }
 

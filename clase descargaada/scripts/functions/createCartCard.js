@@ -1,4 +1,8 @@
+Copy
+Insert
+// Función para crear una tarjeta de producto en el carrito
 function createCartCard(product) {
+  // Retorna una plantilla HTML que muestra la información del producto en la tarjeta del carrito
   return `
     <article class="product-cart">
       <img class="product-img" src="${product.image}" alt="${product.title}">
