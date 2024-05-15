@@ -1,3 +1,4 @@
+import { products } from '../products';
 // Función para actualizar el subtotal en función del cambio de cantidad en el carrito
 function changeSubtotal(event) {
   // Obtiene el valor del input que disparó el evento

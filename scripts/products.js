@@ -303,3 +303,5 @@ const products = [
   prod2,
   prod20,
 ];
+
+export { products };

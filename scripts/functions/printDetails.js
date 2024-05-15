@@ -1,3 +1,5 @@
+import { products } from '../products';
+
 function printDetails(id) {
   const product = products.find((each) => each.id === id);
   const detailsTemplate = `

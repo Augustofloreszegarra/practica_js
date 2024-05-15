@@ -1,3 +1,5 @@
+import { products } from '../products';
+
 // Función para guardar un producto en el carrito
 function saveProd(id) {
   // Encuentra el producto con el id especificado en la lista de productos

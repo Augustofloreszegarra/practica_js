@@ -1,3 +1,4 @@
+import { printCartCards } from './printCartCards.js';
 // Esta función limpia el carrito de compras.
 function clearCart () {
   // Inicializamos el array de productos del carrito como un array vacío.

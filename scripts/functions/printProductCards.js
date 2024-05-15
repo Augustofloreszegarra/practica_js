@@ -1,5 +1,7 @@
+import { createProductCard } from "./createProductCard.js";
+
 // Función para imprimir las tarjetas de productos en la página
-function printProductCards(arrayOfProducts, idSelector) {
+export default function printProductCards(arrayOfProducts, idSelector) {
   // Inicializa la variable productsTemplate como una cadena vacía
   let productsTemplate = "";
 

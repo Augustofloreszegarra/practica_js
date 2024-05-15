@@ -1,3 +1,6 @@
+import { printCartCards } from './printCartCards.js';
+import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login} from './functions/printLayout.js';
+
 // Oculta el campo de búsqueda en la página
 hideSearch();
 

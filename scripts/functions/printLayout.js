@@ -157,4 +157,5 @@ function login () {
   }
 };
 
+export { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login};
 

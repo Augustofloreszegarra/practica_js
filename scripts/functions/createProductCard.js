@@ -1,5 +1,5 @@
 // Función para crear una tarjeta de producto
-function createProductCard(product) {
+export default function createProductCard(product) {
   // Devuelve la plantilla HTML para mostrar la información del producto
   return `
     <a class="product-card" href="./details.html?id=${product.id}">
