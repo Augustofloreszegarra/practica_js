@@ -1,5 +1,7 @@
+import { createCartCard } from "./createCartCard.js";
+
 // Función para imprimir las tarjetas del carrito en la página web
-export default function printCartCards(arrayOfProducts, id) {
+function printCartCards(arrayOfProducts, id) {
   // Inicializa una cadena vacía para almacenar las plantillas de las tarjetas del carrito
   let cartTemplates = "";
 
@@ -24,3 +26,5 @@ export default function printCartCards(arrayOfProducts, id) {
     `;
   }
 }
+
+export { printCartCards };

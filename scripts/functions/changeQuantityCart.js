@@ -1,3 +1,5 @@
+import { printCartTotal } from "./printCartTotal.js";
+
 // Esta función se utiliza para cambiar la cantidad de un producto en el carrito.
 function changeQuantityCart(event) {
   // Obtener el array de productos del carrito almacenado en el localStorage y convertirlo de nuevo a un objeto.
@@ -13,3 +15,7 @@ function changeQuantityCart(event) {
   // y mostrar el total actualizado del carrito después de cambiar la cantidad del producto.
   printCartTotal(cartproducts, "total");
 }
+
+window.changeQuantityCart = changeQuantityCart;
+
+export { changeQuantityCart };

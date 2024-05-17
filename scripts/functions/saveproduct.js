@@ -1,4 +1,4 @@
-import { products } from '../products';
+import { products } from "../products.js";
 
 // Función para guardar un producto en el carrito
 function saveProd(id) {
@@ -34,3 +34,5 @@ function saveProd(id) {
     localStorage.setItem("cart", stringifyProduct);
   }
 }
+
+export { saveProd };

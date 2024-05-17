@@ -1,5 +1,6 @@
-import { printCartCards } from './printCartCards.js';
-import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login} from './functions/printLayout.js';
+import { printCartCards } from './functions/printCartCards.js';
+import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login, loginData} from './functions/printLayout.js';
+import { printCartTotal } from './functions/printCartTotal.js';
 
 // Oculta el campo de búsqueda en la página
 hideSearch();
@@ -26,3 +27,7 @@ printCartCards(cartproducts, "productscart");
 
 // Calcula y muestra el total del carrito en la página
 printCartTotal(cartproducts, "total");
+
+// Llama a la función changeQuantityCart para actualizar el precio del carrito
+const prueba = document.querySelector(".product-input");
+prueba.addEventListener("change", changeQuantityCart);

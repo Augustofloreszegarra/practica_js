@@ -1,6 +1,7 @@
-import { products } from '../products';
-import { printProductCards } from './printProductCards.js';
-import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login} from './functions/printLayout.js';
+import { products } from './products.js';
+import { printProductCards } from './functions/printProductCards.js';
+import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login, loginData} from './functions/printLayout.js';
+import { printDetails } from './functions/printDetails.js';
 
 // Oculta el campo de búsqueda en la página
 hideSearch();

@@ -304,4 +304,19 @@ const products = [
   prod20,
 ];
 
-export { products };
+// Función de comparación para ordenar los productos por nombre de forma ascendente
+function compareNames(a, b) {
+  const nameA = a.title.toUpperCase();
+  const nameB = b.title.toUpperCase();
+  
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+}
+products.sort(compareNames);
+
+export {products};

@@ -1,7 +1,7 @@
-import { createProductCard } from "./createProductCard.js";
+import {createProductCard}  from "./createProductCard.js";
 
 // Función para imprimir las tarjetas de productos en la página
-export default function printProductCards(arrayOfProducts, idSelector) {
+function printProductCards(arrayOfProducts, idSelector) {
   // Inicializa la variable productsTemplate como una cadena vacía
   let productsTemplate = "";
 
@@ -22,3 +22,5 @@ export default function printProductCards(arrayOfProducts, idSelector) {
     productsSelector.innerHTML = "<h3 style='width: 100%; text-align: center'>No hay coincidencias</h3>";
   }
 }
+
+export { printProductCards }

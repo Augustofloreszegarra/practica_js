@@ -1,5 +1,5 @@
-Copy
-Insert
+import { changeQuantityCart } from "./changeQuantityCart.js";
+
 // Función para crear una tarjeta de producto en el carrito
 function createCartCard(product) {
   // Retorna una plantilla HTML que muestra la información del producto en la tarjeta del carrito
@@ -9,9 +9,11 @@ function createCartCard(product) {
       <div class="product-details">
         <strong class="product-title">${product.title}</strong><span class="product-description">- ${product.color}</span>
         <p class="product-description">${product.description}</p>
-        <input class="product-input" type="number" name="quantity" value=${product.quantity} min="1" id="${product.id}" onchange="changeQuantityCart(event)">
+        <input class="product-input" type="number" name="quantity" value=${product.quantity} min="1" id="${product.id}" >
       </div>
       <strong class="price">AR$ ${product.price}</strong>
     </article>
   `;
 }
+
+export { createCartCard };

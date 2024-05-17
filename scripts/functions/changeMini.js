@@ -10,3 +10,5 @@ function changeMini(event) {
   // a la ruta de la imagen seleccionada.
   bigSelector.src = selectedSrc;
 }
+
+export {changeMini};

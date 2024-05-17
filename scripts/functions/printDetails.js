@@ -1,4 +1,7 @@
-import { products } from '../products';
+import { products } from '../products.js';
+import { changeMini } from './changeMini.js';
+import { changeSubtotal } from './changeSubtotal.js';
+import { saveProd } from './saveproduct.js';
 
 function printDetails(id) {
   const product = products.find((each) => each.id === id);
@@ -68,7 +71,7 @@ function printDetails(id) {
             }" onchange="changeSubtotal(event)"/>          
             <button type="button" id=${
               product.id
-            } class="cart-btn" onclick="saveProd(id)">Añadir al Carrito</button>
+            } class="cart-btn">Añadir al Carrito</button>
           </div>
         </div>
       </div>
@@ -76,4 +79,8 @@ function printDetails(id) {
   `;
   const detailsSelector = document.querySelector("#details");
   detailsSelector.innerHTML = detailsTemplate;
+  const cartButton = document.getElementById(`${product.id}`)
+  cartButton.addEventListener("click", () => saveProd(product.id));
 }
+
+export { printDetails };

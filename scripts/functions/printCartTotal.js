@@ -1,13 +1,17 @@
+import { clearCart } from "../functions/buyProducts.js";
+
 // Función para imprimir el resumen del pedido y el botón de compra en la página web
 function printCartTotal(arrayOfProducts, id) {
   // Inicializa la variable total como 0
-  let total = 0;
+  let total = arrayOfProducts.reduce(  (a, b) => a + b.price * b.quantity,0);
 
-  // Recorre cada producto en el array y calcula el subtotal (precio multiplicado por cantidad)
+ /*  // Recorre cada producto en el array y calcula el subtotal (precio multiplicado por cantidad)
   // y lo suma a la variable total
   arrayOfProducts.forEach(
     (each) => (total = total + each.price * each.quantity)
-  );
+  ); */
+
+
 
   // Crea una plantilla HTML con el resumen del pedido y el botón de compra
   const template = `
@@ -31,3 +35,5 @@ function printCartTotal(arrayOfProducts, id) {
   const buySelector = document.getElementById("buy");
   buySelector.addEventListener("click", clearCart);
 }
+
+export { printCartTotal };

@@ -1,4 +1,5 @@
 import { printCartCards } from './printCartCards.js';
+import { printCartTotal } from './printCartTotal.js';
 // Esta función limpia el carrito de compras.
 function clearCart () {
   // Inicializamos el array de productos del carrito como un array vacío.
@@ -16,3 +17,5 @@ function clearCart () {
   // y mostrar el total actualizado del carrito.
   printCartTotal( cartproducts, "total" );
 }
+
+export { clearCart };

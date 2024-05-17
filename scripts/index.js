@@ -1,6 +1,6 @@
-import { products } from '../products';
-import { printProductCards } from './printProductCards.js';
-import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login} from './functions/printLayout.js';
+import { products } from './products.js';
+import { printProductCards } from  './functions/printProductCards.js';  
+import { options, hideSearch, printNavBar, printFooter, printIcons, showCart, login, loginData} from './functions/printLayout.js';
 
 // Imprime los íconos en la página
 printIcons();

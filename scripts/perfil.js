@@ -1,3 +1,5 @@
+import { login, loginData } from './functions/printLayout.js';
+
 let isOnline = false;
 
 let misDatosFisicos = ["Juan",25,["Calle principal",123,"Ciudad"],1.75,70,"Deportes",]
